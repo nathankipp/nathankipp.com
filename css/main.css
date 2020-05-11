@@ -8,7 +8,7 @@ div.bg-containter > .row {
 	font-family: Arial;
 }
 div.bg-containter {
-	position: absolute; 
+	position: absolute;
 	top:0;
 	left: 0;
 }
@@ -111,8 +111,7 @@ div { border: 0px solid red; }
 	border-radius: 100px;
 	background-color: #fff;
 	margin: 0 auto;
-	background: url('../images/me.jpg');
-	background-size: 200px;
+	background: no-repeat left/cover url('../images/me.jpg');
 	border: 4px solid #fff;
 }
 
