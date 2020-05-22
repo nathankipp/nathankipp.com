@@ -88,6 +88,12 @@ div { border: 0px solid red; }
 .navbar .navbar-brand {
     color:#000;
 }
+.navbar .navbar-brand span {
+    font-size: 14px;
+    position: relative;
+    top: -1px;
+    color: dodgerblue;
+}
 
 .main-container {
 	position: relative;
