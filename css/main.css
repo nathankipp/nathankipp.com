@@ -122,47 +122,20 @@ div { border: 0px solid red; }
 }
 
 .fa {
-  color: #efefef;
+  color: #000000;
   font-size: 20px;
-}
-.fa.fa-facebook {
-  color: #3b5998;
-}
-.fa.fa-facebook-official {
-  color: #3b5998;
-}
-.fa.fa-facebook-square {
-  color: #3b5998;
-}
-.fa.fa-instagram {
-  color: #3f729b;
 }
 .fa.fa-linkedin {
   color: #0976b4;
 }
-.fa.fa-linkedin-square {
-  color: #0976b4;
+.fa.fa-github {
+  color: #000000;
 }
-.fa.fa-skype {
-  color: #00aff0;
+.fa.fa-instagram {
+  color: #3f729b;
 }
 .fa.fa-twitter {
   color: #55acee;
-}
-.fa.fa-twitter-square {
-  color: #55acee;
-}
-.fa.fa-yelp {
-  color: #af0606;
-}
-.fa.fa-youtube {
-  color: #e52d27;
-}
-.fa.fa-youtube-play {
-  color: #e52d27;
-}
-.fa.fa-youtube-square {
-  color: #e52d27;
 }
 /*
 div[class="row"] {
