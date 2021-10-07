@@ -1,0 +1,151 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: scroll;
+  padding: 1rem;
+  text-align: justify;
+  margin: 0 1rem;
+  max-height: 70%;
+}
+.modal-content a {
+  margin-right: 1rem;
+}
+icon {
+  font-size: 2rem;
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+@media screen and (orientation: portrait) {
+  br {
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 992px) {
+  br {
+    display: none;
+  }
+}
+
+.bg-section {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-grow: 0;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+button {
+  background-color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0.85;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+#father,
+#m-father .bg-section {
+  background-image: url("/images/bg/fam-small.jpg");
+}
+#father button {
+  bottom: 1rem;
+  left: 1rem;
+  position: absolute;
+}
+
+#software-engineer,
+#m-software-engineer .bg-section {
+  background-image: url("/images/bg/td-small.jpg");
+}
+
+#cyclist,
+#m-cyclist .bg-section {
+  background-image: url("/images/bg/cycling-small.jpg");
+}
+#cyclist button {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+/* Medium and up */
+@media screen and (min-width: 992px) {
+  #father,
+  #m-father .bg-section {
+    background-image: url("/images/bg/fam-medium.jpg");
+  }
+  #software-engineer,
+  #m-software-engineer .bg-section {
+    background-image: url("/images/bg/td-medium.jpg");
+  }
+  #cyclist,
+  #m-cyclist .bg-section {
+    background-image: url("/images/bg/cycling-medium.jpg");
+  }
+  #father button,
+  #cyclist button {
+    bottom: unset;
+    left: unset;
+    position: relative;
+    right: unset;
+    top: unset;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 1200px) {
+  #father,
+  #m-father .bg-section {
+    background-image: url("/images/bg/fam-large.jpg");
+  }
+  #software-engineer,
+  #m-software-engineer .bg-section {
+    background-image: url("/images/bg/td-large.jpg");
+  }
+  #cyclist,
+  #m-cyclist .bg-section {
+    background-image: url("/images/bg/cycling-large.jpg");
+  }
+}
+
+/* xl and up */
+@media screen and (min-width: 2500px) {
+  #father,
+  #m-father .bg-section {
+    background-image: url("/images/bg/fam-xlarge.jpg");
+  }
+  #software-engineer,
+  #m-software-engineer .bg-section {
+    background-image: url("/images/bg/td-xlarge.jpg");
+  }
+  #cyclist,
+  #m-cyclist .bg-section {
+    background-image: url("/images/bg/cycling-xlarge.jpg");
+  }
+}

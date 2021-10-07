@@ -1,0 +1,148 @@
+html, body,
+div.bg-containter,
+div.bg-containter > .row {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+div.bg-containter {
+	position: absolute;
+	top:0;
+	left: 0;
+}
+div { border: 0px solid red; }
+.half {
+	background: url('../images/bg/chi-small.jpg');
+	background-position: center top;
+	background-size: cover;
+	height: 50%;
+	opacity: 0;
+}
+.half:last-child {
+	background: url('../images/bg/td-small.jpg');
+	background-position: center top;
+	background-size: cover;
+	opacity: 0;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+	.half {
+		background: url('../images/bg/chi-medium.jpg');
+		background-position: center top;
+		background-size: cover;
+	}
+	.half:last-child {
+		background: url('../images/bg/td-medium.jpg');
+		background-position: center top;
+		background-size: cover;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+	.half {
+		background: url('../images/bg/chi-large.jpg');
+		background-position: center top;
+		background-size: cover;
+	}
+	.half:last-child {
+		background: url('../images/bg/td-large.jpg');
+		background-position: center top;
+		background-size: cover;
+	}
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+	.half {
+		background: url('../images/bg/chi-xlarge.jpg');
+		background-position: center top;
+		background-size: cover;
+	}
+	.half:last-child {
+		background: url('../images/bg/td-xlarge.jpg');
+		background-position: center top;
+		background-size: cover;
+	}
+}
+
+.navbar {
+    background-color:#fff;
+    color:#000;
+    border-radius:0;
+}
+
+.navbar .navbar-nav > li > a {
+    color:#000;
+}
+.navbar .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #000;
+    background-color:transparent;
+}
+.navbar .navbar-brand {
+    color:#000;
+}
+.navbar .navbar-brand span {
+    font-size: 14px;
+    position: relative;
+    top: -2px;
+    color: dodgerblue;
+}
+
+.main-container {
+	position: relative;
+	top: 0;
+	margin-top: 100px;
+}
+.my-name {
+	width: 100px;
+	border-radius: 20px;
+	background-color: #fff;
+	margin: 0 auto;
+	line-height: 70px;
+	font-size: 28px;
+	vertical-align: middle;
+	margin-top: 62px;
+	padding: 0;
+}
+.circle-me {
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	background-color: #fff;
+	margin: 0 auto;
+	background: no-repeat left/cover url('../images/me.jpg');
+	border: 4px solid #fff;
+}
+
+.fa {
+  color: #000000;
+  font-size: 20px;
+}
+.fa.fa-linkedin {
+  color: #0976b4;
+}
+.fa.fa-github {
+  color: #000000;
+}
+.fa.fa-instagram {
+  color: #3f729b;
+}
+.fa.fa-twitter {
+  color: #55acee;
+}
+/*
+div[class="row"] {
+    border: 1px dotted rgba(0, 0, 0, 0.5);
+}
+
+div[class^="col-"] {
+    background-color: rgba(255, 0, 0, 0.2);
+}
+*/
