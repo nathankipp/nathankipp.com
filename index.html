@@ -1,61 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>nathankipp dot com</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css" />
-		<link rel="stylesheet" href="css/main.css?d=20200521" />
-	</head>
-	<body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container-fluid">
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="#">father <span>|</span> software engineer <span>|</span> cyclist</a>
-	    </div>
+<body>
+  <div class="bg-section" id="father">
+    <button data-open="m-father">father</button>
+  </div>
+  <div class="bg-section" id="software-engineer">
+    <button data-open="m-software-engineer">
+      software <br />
+      engineer
+    </button>
+  </div>
+  <div class="bg-section" id="cyclist">
+    <button data-open="m-cyclist">cyclist</button>
+  </div>
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav">
-		<li><a target="_blank" href="https://servicenow.com">working @ ServiceNow</a></li>
-	        <li><a target="_blank" href="https://teamdesktop.com">created TEAMDesktop</a></li>
-		<li><a target="_blank" href="https://jessecoconut.com">jealous of my brother's travels</a></li>
-	      </ul>
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a target="_blank" href="https://www.linkedin.com/in/nskipp/"><i class="fa fa-linkedin"></i></a></li>
-	        <li><a target="_blank" href="https://github.com/nathankipp"><i class="fa fa-github"></i></a></li-->
-	        <li><a target="_blank" href="https://instagram.com/nathankipp"><i class="fa fa-instagram"></i></a></li>
-	        <li><a target="_blank" href="https://twitter.com/nathankipp"><i class="fa fa-twitter"></i></a></li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
-	<div class="container-fluid bg-containter">
-		<div class="row">
-			<div class="col-lg-12 half"></div>
-			<div class="col-lg-12 half"></div>
-		</div>
-	</div>
-	<div class="container-fluid main-container">
-		<div class="row">
-			<!--div class="col-lg-2 text-center"></div>
-			<div class="col-lg-2 text-center my-name">nathan</div-->
-			<div class="col-lg-12 text-center">
-				<div class="circle-me"></div>
-			</div>
-			<!--div class="col-lg-2 text-center my-name">kipp</div>
-			<div class="col-lg-2 text-center"></div-->
-		</div>
-	</div>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>
-	</body>
-</html>
+  <div class="full reveal" id="m-father" data-reveal>
+    <div class="bg-section">
+      <div class="modal-content">
+        <h1>life is good</h1>
+        <p>
+          I live with my wife and our two sons just north of Chicago. We're near
+          to friends and family; we have easy-access to beaches, trails, parks,
+          and playgrounds.
+        </p>
+        <p>
+          Before having kids I bounced from place to place coaching women's
+          soccer for a number of collegiate and professional teams. It was a
+          fantastic experience filled with friendships and fun.
+        </p>
+        <p>
+          I enjoyed the big cities (Miami, Chicago, Boston, NYC), but life is
+          good here in the burbs, and I'm not going anywhere.
+        </p>
+        <a href="https://instagram.com/nathankipp" target="_blank"
+          ><icon class="fab fa-instagram"
+        /></a>
+      </div>
+      <button
+        style="background-color: unset; color: black"
+        class="close-button"
+        data-close
+        aria-label="Close modal"
+        type="button"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="full reveal" id="m-software-engineer" data-reveal>
+    <div class="bg-section">
+      <div class="modal-content">
+        <h1>i like building stuff</h1>
+        <p>
+          I work for
+          <a href="https://servicenow.com">ServiceNow</a>, an enterprise
+          software company specializing in workflow optimization.
+        </p>
+        <p>
+          My team is creating a suite of modern UIs for both internal users and
+          SN's clients, allowing them to quickly create and configure
+          experiences in the NOW platform.
+        </p>
+        <p>
+          In my early coding years I conceptualized, coded, and supported one of
+          the first-to-market SaaS programs for collegiate athletics:
+          TEAMDesktop. In my spare time I mess around with frameworks and
+          interesting APIs.
+        </p>
+        <div>
+          <a href="https://instagram.com/nathankipp" target="_blank"
+            ><icon class="fab fa-linkedin"
+          /></a>
+          <a href="https://instagram.com/nathankipp" target="_blank"
+            ><icon class="fab fa-github"
+          /></a>
+        </div>
+      </div>
+      <button
+        style="background-color: unset; color: red"
+        class="close-button"
+        data-close
+        aria-label="Close modal"
+        type="button"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="full reveal" id="m-cyclist" data-reveal>
+    <div class="bg-section">
+      <div class="modal-content">
+        <h1>let's ride!</h1>
+        <p>
+          I'm not a tri-athlete, but I do enjoy all three of the disciplines.
+          Mostly though, I like to ride.
+        </p>
+        <p>
+          My trusty road bike, Babs, has served me well for more than a decade.
+          The Grey Lady&#8212;my gravel bike&#8212;is for fun and adventure. And
+          due to rain and rust, my city fixie, Son of P, has recently been
+          retired to the garage wall.
+        </p>
+        <p>Come join me for a spin sometime!</p>
+        <div>
+          <a href="https://instagram.com/nathankipp" target="_blank"
+            ><icon class="fab fa-strava"
+          /></a>
+        </div>
+      </div>
+      <button
+        style="background-color: unset; color: yellow"
+        class="close-button"
+        data-close
+        aria-label="Close modal"
+        type="button"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+</body>
