@@ -21,12 +21,28 @@ body {
   text-align: justify;
   margin: 0 1rem;
   max-height: 70%;
+  max-width: 50rem;
 }
-.modal-content a {
+.icons a {
   margin-right: 1rem;
 }
 icon {
   font-size: 2rem;
+}
+.fab.fa-linkedin {
+  color: #0976b4;
+}
+.fab.fa-github {
+  color: #000000;
+}
+.fab.fa-strava {
+  color: #fc5200;
+}
+.fab.fa-instagram {
+  color: #3f729b;
+}
+.fab.fa-twitter {
+  color: #55acee;
 }
 
 @media screen and (orientation: landscape) {
