@@ -8,7 +8,7 @@ function clean() {
   console.log("done with clean()");
 }
 
-const BUILD_DIR = "./build";
+const BUILD_DIR = "./docs";
 const F_SITES_DIST = "./node_modules/foundation-sites/dist";
 
 const COPIES = [{ from: `./css/*.*`, to: `${BUILD_DIR}/css/` }];
