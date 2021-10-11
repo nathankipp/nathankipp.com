@@ -26,6 +26,10 @@ body {
 .icons a {
   margin-right: 1rem;
 }
+.icons a.float-right {
+  margin-left: 1rem;
+  margin-right: 0;
+}
 icon {
   font-size: 2rem;
 }
@@ -34,6 +38,15 @@ icon {
 }
 .fab.fa-github {
   color: #000000;
+}
+.fas.fa-code {
+  color: black;
+}
+.fas.fa-biking {
+  color: #329632;
+}
+.fas.fa-futbol {
+  color: #35033A;
 }
 .fab.fa-strava {
   color: #fc5200;
