@@ -46,7 +46,7 @@ icon {
   color: #329632;
 }
 .fas.fa-futbol {
-  color: #35033A;
+  color: #35033a;
 }
 .fab.fa-strava {
   color: #fc5200;
@@ -164,7 +164,8 @@ button {
 }
 
 /* xl and up */
-@media screen and (min-width: 2500px) {
+@media screen and (min-width: 1200px) and (orientation: landscape),
+  screen and (min-width: 2500px) {
   #father,
   #m-father .bg-section {
     background-image: url("/images/bg/fam-xlarge.jpg");
