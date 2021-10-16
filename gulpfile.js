@@ -4,7 +4,10 @@ const concat = require("gulp-concat");
 
 const BUILD_DIR = "./docs";
 
-const COPY = [{ from: `./*.css`, to: `${BUILD_DIR}/` }];
+const COPY = [
+  { from: './index.css', to: `${BUILD_DIR}/` },
+  { from: './index.js', to: `${BUILD_DIR}/` }
+];
 const copyFromTo = ({ from, to }) => src(from).pipe(dest(to));
 const copy = () => COPY.forEach(copyFromTo);
 
@@ -21,7 +24,7 @@ function defaultTask(cb) {
     server: { baseDir: BUILD_DIR },
   });
 
-  watch(["./*.html", "./*.css", "./partials/*.*"], function (cb) {
+  watch(["./index.*", "./partials/*.*"], function (cb) {
     copy();
     writeIndexHtml();
     browserSync.reload();
