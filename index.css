@@ -22,6 +22,16 @@ body {
   margin: 0 1rem;
   max-height: 70%;
   max-width: 50rem;
+  position: relative;
+}
+.show-picture {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.show-picture icon {
+  color: black;
+  font-size: 1.5rem;
 }
 .icons a {
   margin-right: 1rem;

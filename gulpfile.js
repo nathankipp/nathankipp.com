@@ -24,7 +24,7 @@ function defaultTask(cb) {
     server: { baseDir: BUILD_DIR },
   });
 
-  watch(["./index.*", "./partials/*.*"], function (cb) {
+  watch(["./index.*", "./body.html", "./partials/*.*"], function (cb) {
     copy();
     writeIndexHtml();
     browserSync.reload();
