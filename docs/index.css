@@ -10,6 +10,94 @@ body {
   justify-content: space-evenly;
 }
 
+@media screen and (orientation: landscape) {
+  .fa-chevron-circle-left {
+    display: none;
+  }
+}
+@media screen and (orientation: portrait) {
+  .fa-chevron-circle-down {
+    display: none;
+  }
+}
+
+.info-icon {
+  cursor: pointer;
+  top: 1rem;
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.25s;
+}
+.info-icon.show {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+@media screen and (orientation: landscape) {
+  .info-icon {
+    left: 1rem;
+    right: unset;
+  }
+  .info-icon.show {
+    transform: rotate3d(1, 0, 0, 180deg);
+  }
+}
+
+.info-icons {
+  align-items: center;
+  background-color: white;
+  border-left: 1px solid black;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  right: -4rem;
+  top: 0;
+  transition: right 0.25s;
+  width: 4rem;
+}
+.info-icons.show {
+  right: 0;
+}
+@media screen and (orientation: landscape) {
+  .info-icons {
+    border-bottom: 1px solid black;
+    border-left: unset;
+    flex-direction: row;
+    height: 4rem;
+    right: unset;
+    top: -4rem;
+    transition: top 0.25s;
+    width: 100%;
+  }
+  .info-icons.show {
+    top: 0;
+    right: unset;
+  }
+}
+
+.info-icons .nk {
+  background-color: #4796fe;
+  border-radius: 2px;
+  color: #0a0099;
+  padding: 4px 6px;
+  position: absolute;
+  bottom: 1rem;
+}
+@media screen and (orientation: landscape) {
+  .info-icons .nk {
+    right: 1rem;
+  }
+}
+
+.info-icons > a {
+  margin: 0.75rem;
+}
+.info-icons .fa-chevron-circle-right {
+  position: absolute;
+  bottom: 1rem;
+}
+
 .modal-content {
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 0.5rem;
@@ -40,7 +128,7 @@ body {
   margin-left: 1rem;
   margin-right: 0;
 }
-icon {
+span.icon {
   font-size: 2rem;
 }
 .fab.fa-linkedin {
