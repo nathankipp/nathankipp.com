@@ -1,0 +1,115 @@
+@mixin bgimg($name, $size) {
+  background-image: url('/assets/background-images/#{$name}-#{$size}.jpg');
+}
+
+.bg-section {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-grow: 0;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+button {
+  background-color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  opacity: 0.85;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+#father {
+  @include bgimg('fam', 'small');
+
+  button {
+    bottom: 1rem;
+    left: 1rem;
+    position: absolute;
+  }
+}
+#m-father .bg-section {
+  @include bgimg('fam', 'small');
+}
+
+#software-engineer,
+#m-software-engineer .bg-section {
+  @include bgimg('td', 'small');
+}
+
+#cyclist {
+  @include bgimg('cycling', 'small');
+
+  button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+}
+#m-cyclist .bg-section {
+  @include bgimg('cycling', 'small');
+}
+
+/* Medium and up */
+@media screen and (min-width: 992px) {
+  #father,
+  #m-father .bg-section {
+    @include bgimg('fam', 'medium');
+  }
+  #software-engineer,
+  #m-software-engineer .bg-section {
+    @include bgimg('td', 'medium');
+  }
+  #cyclist,
+  #m-cyclist .bg-section {
+    @include bgimg('cycling', 'medium');
+  }
+  #father button,
+  #cyclist button {
+    bottom: unset;
+    left: unset;
+    position: relative;
+    right: unset;
+    top: unset;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 1200px) {
+  #father,
+  #m-father .bg-section {
+    @include bgimg('fam', 'large');
+  }
+  #software-engineer,
+  #m-software-engineer .bg-section {
+    @include bgimg('td', 'large');
+  }
+  #cyclist,
+  #m-cyclist .bg-section {
+    @include bgimg('cycling', 'large');
+  }
+}
+
+/* xl and up */
+@media screen and (min-width: 1200px) and (orientation: landscape),
+  screen and (min-width: 2500px) {
+  #father,
+  #m-father .bg-section {
+    @include bgimg('fam', 'xlarge');
+  }
+  #software-engineer,
+  #m-software-engineer .bg-section {
+    @include bgimg('td', 'xlarge');
+  }
+  #cyclist,
+  #m-cyclist .bg-section {
+    @include bgimg('cycling', 'xlarge');
+  }
+}

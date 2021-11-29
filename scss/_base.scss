@@ -1,0 +1,37 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+@media screen and (orientation: landscape) {
+  .fa-chevron-circle-left {
+    display: none;
+  }
+}
+@media screen and (orientation: portrait) {
+  .fa-chevron-circle-down {
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) {
+  body {
+    flex-direction: row;
+  }
+}
+@media screen and (orientation: portrait) {
+  br {
+    display: none;
+  }
+}
+@media screen and (orientation: landscape) and (min-width: 992px) {
+  br {
+    display: none;
+  }
+}

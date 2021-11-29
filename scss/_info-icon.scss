@@ -1,0 +1,21 @@
+.info-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  transition: transform 0.15s;
+
+  &.show {
+    transform: rotate3d(0, 1, 0, 180deg);
+  }
+}
+@media screen and (orientation: landscape) {
+  .info-icon {
+    left: 1rem;
+    right: unset;
+
+    &.show {
+      transform: rotate3d(1, 0, 0, 180deg);
+    }
+  }
+}

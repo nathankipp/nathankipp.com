@@ -1,11 +1,17 @@
+'use strict';
+
 const browserSync = require("browser-sync").create();
 const { watch, src, dest } = require("gulp");
+const sass = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 
 const BUILD_DIR = "./docs";
 
+const sassify = () => src('./*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(dest(`${BUILD_DIR}/`));
+
 const COPY = [
-  { from: './index.css', to: `${BUILD_DIR}/` },
   { from: './index.js', to: `${BUILD_DIR}/` }
 ];
 const copyFromTo = ({ from, to }) => src(from).pipe(dest(to));
@@ -17,6 +23,7 @@ const writeIndexHtml = () =>
     .pipe(dest(`${BUILD_DIR}/`));
 
 function defaultTask(cb) {
+  sassify();
   copy();
   writeIndexHtml();
 
@@ -24,7 +31,8 @@ function defaultTask(cb) {
     server: { baseDir: BUILD_DIR },
   });
 
-  watch(["./index.*", "./body.html", "./partials/*.*"], function (cb) {
+  watch(["./index.*", "./body.html", "./partials/*.*", "./scss/*.*"], function (cb) {
+    sassify();
     copy();
     writeIndexHtml();
     browserSync.reload();
