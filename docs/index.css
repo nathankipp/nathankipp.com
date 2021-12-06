@@ -47,6 +47,9 @@ body {
   position: relative;
   width: 100%;
 }
+.bg-section.contain {
+  background-size: contain;
+}
 
 button {
   background-color: white;
@@ -256,16 +259,6 @@ button {
   position: relative;
 }
 
-.show-picture {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-}
-.show-picture icon {
-  color: black;
-  font-size: 1.5rem;
-}
-
 .icons a {
   margin-right: 1rem;
 }
@@ -277,6 +270,20 @@ button {
 
 span.icon {
   font-size: 2rem;
+}
+
+.show-picture {
+  color: black;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+.compress-expand {
+  bottom: 1rem;
+  color: black;
+  position: absolute;
+  right: 1rem;
 }
 
 .fab.fa-linkedin {
