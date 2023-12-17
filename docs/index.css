@@ -51,6 +51,12 @@ body {
   background-size: contain;
 }
 
+@media screen and (orientation: landscape) {
+  #father,
+#m-father .bg-section {
+    background-position: left;
+  }
+}
 button {
   background-color: white;
   border-radius: 0.5rem;
