@@ -1,0 +1,33 @@
+#debug {
+    display: none;
+}
+
+#debug {
+    &:before {
+      content: "small";
+    }
+    background: red;
+    color: yellow;
+    font-size: 1.5rem;
+    height: 2.5rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 8rem;
+    z-index: 99;
+  }
+  @media screen and (min-width: 992px) {
+    #debug:before {
+      content: "medium";
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    #debug:before {
+      content: "large";
+    }
+  }
+  @media screen and (min-width: 2500px) {
+    #debug:before {
+      content: "x-large"
+    }
+  }
