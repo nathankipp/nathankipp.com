@@ -1,3 +1,119 @@
+.bg-section {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-grow: 0;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.bg-section.contain {
+  background-size: contain;
+  background-position: center;
+}
+
+@media screen and (orientation: landscape) {
+  #father,
+#m-father .bg-section:not(.contain) {
+    background-position: left;
+  }
+}
+button {
+  align-self: flex-end;
+  background-color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem;
+  opacity: 0.9;
+  padding: 0.5rem 1rem;
+  text-align: center;
+}
+
+#father {
+  background-image: url("/assets/background-images/fam-small.jpg");
+}
+
+#m-father .bg-section {
+  background-image: url("/assets/background-images/fam-small.jpg");
+}
+
+#software-engineer,
+#m-software-engineer .bg-section {
+  background-image: url("/assets/background-images/td-small.jpg");
+}
+
+#cyclist {
+  background-image: url("/assets/background-images/cycling-small.jpg");
+}
+
+#m-cyclist .bg-section {
+  background-image: url("/assets/background-images/cycling-small.jpg");
+}
+
+/* Medium and up */
+@media screen and (min-width: 992px) {
+  #father,
+#m-father .bg-section {
+    background-image: url("/assets/background-images/fam-medium.jpg");
+  }
+
+  #software-engineer,
+#m-software-engineer .bg-section {
+    background-image: url("/assets/background-images/td-medium.jpg");
+  }
+
+  #cyclist,
+#m-cyclist .bg-section {
+    background-image: url("/assets/background-images/cycling-medium.jpg");
+  }
+}
+/* Large and up */
+@media screen and (min-width: 1200px) {
+  #father,
+#m-father .bg-section {
+    background-image: url("/assets/background-images/fam-large.jpg");
+  }
+
+  #software-engineer,
+#m-software-engineer .bg-section {
+    background-image: url("/assets/background-images/td-large.jpg");
+  }
+
+  #cyclist,
+#m-cyclist .bg-section {
+    background-image: url("/assets/background-images/cycling-large.jpg");
+  }
+
+  button {
+    font-size: 2.5rem;
+  }
+}
+/* xl and up */
+@media screen and (min-width: 2500px) {
+  #father,
+#m-father .bg-section {
+    background-image: url("/assets/background-images/fam-xlarge.jpg");
+  }
+
+  #software-engineer,
+#m-software-engineer .bg-section {
+    background-image: url("/assets/background-images/td-xlarge.jpg");
+  }
+
+  #cyclist,
+#m-cyclist .bg-section {
+    background-image: url("/assets/background-images/cycling-xlarge.jpg");
+  }
+
+  button {
+    font-size: 3rem;
+  }
+}
 html,
 body {
   height: 100%;
@@ -35,130 +151,99 @@ body {
     display: none;
   }
 }
-.bg-section {
-  align-items: center;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  flex-grow: 0;
-  height: 100%;
-  justify-content: center;
-  position: relative;
-  width: 100%;
-}
-.bg-section.contain {
-  background-size: contain;
+#debug {
+  display: none;
 }
 
-@media screen and (orientation: landscape) {
-  #father,
-#m-father .bg-section {
-    background-position: left;
+#debug {
+  background: red;
+  color: yellow;
+  font-size: 1.5rem;
+  height: 2.5rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 8rem;
+  z-index: 99;
+}
+#debug:before {
+  content: "small";
+}
+
+@media screen and (min-width: 992px) {
+  #debug:before {
+    content: "medium";
   }
 }
-button {
-  background-color: white;
-  border-radius: 0.5rem;
-  cursor: pointer;
+@media screen and (min-width: 1200px) {
+  #debug:before {
+    content: "large";
+  }
+}
+@media screen and (min-width: 2500px) {
+  #debug:before {
+    content: "x-large";
+  }
+}
+.icons a {
+  margin-right: 1rem;
+}
+
+.icons a.float-right {
+  margin-left: 1rem;
+  margin-right: 0;
+}
+
+span.icon {
   font-size: 2rem;
-  font-weight: 600;
-  opacity: 0.85;
-  padding: 0.5rem 1rem;
-  text-align: center;
 }
 
-#father {
-  background-image: url("/assets/background-images/fam-small.jpg");
-}
-#father button {
-  bottom: 1rem;
-  left: 1rem;
-  position: absolute;
-}
-
-#m-father .bg-section {
-  background-image: url("/assets/background-images/fam-small.jpg");
-}
-
-#software-engineer,
-#m-software-engineer .bg-section {
-  background-image: url("/assets/background-images/td-small.jpg");
-}
-
-#cyclist {
-  background-image: url("/assets/background-images/cycling-small.jpg");
-}
-#cyclist button {
+.show-picture {
+  color: black;
   position: absolute;
   right: 1rem;
   top: 1rem;
 }
 
-#m-cyclist .bg-section {
-  background-image: url("/assets/background-images/cycling-small.jpg");
+.compress-expand {
+  bottom: 1rem;
+  color: black;
+  position: absolute;
+  right: 1rem;
 }
 
-/* Medium and up */
-@media screen and (min-width: 992px) {
-  #father,
-#m-father .bg-section {
-    background-image: url("/assets/background-images/fam-medium.jpg");
-  }
-
-  #software-engineer,
-#m-software-engineer .bg-section {
-    background-image: url("/assets/background-images/td-medium.jpg");
-  }
-
-  #cyclist,
-#m-cyclist .bg-section {
-    background-image: url("/assets/background-images/cycling-medium.jpg");
-  }
-
-  #father button,
-#cyclist button {
-    bottom: unset;
-    left: unset;
-    position: relative;
-    right: unset;
-    top: unset;
-  }
+.fab.fa-linkedin {
+  color: #0976b4;
 }
-/* Large and up */
-@media screen and (min-width: 1200px) {
-  #father,
-#m-father .bg-section {
-    background-image: url("/assets/background-images/fam-large.jpg");
-  }
 
-  #software-engineer,
-#m-software-engineer .bg-section {
-    background-image: url("/assets/background-images/td-large.jpg");
-  }
-
-  #cyclist,
-#m-cyclist .bg-section {
-    background-image: url("/assets/background-images/cycling-large.jpg");
-  }
+.fab.fa-github {
+  color: #000000;
 }
-/* xl and up */
-@media screen and (min-width: 1200px) and (orientation: landscape), screen and (min-width: 2500px) {
-  #father,
-#m-father .bg-section {
-    background-image: url("/assets/background-images/fam-xlarge.jpg");
-  }
 
-  #software-engineer,
-#m-software-engineer .bg-section {
-    background-image: url("/assets/background-images/td-xlarge.jpg");
-  }
-
-  #cyclist,
-#m-cyclist .bg-section {
-    background-image: url("/assets/background-images/cycling-xlarge.jpg");
-  }
+.fas.fa-code {
+  color: black;
 }
+
+.fas.fa-biking {
+  color: #329632;
+}
+
+.fas.fa-futbol {
+  color: #35033a;
+}
+
+.fab.fa-strava {
+  color: #fc5200;
+}
+
+.fab.fa-instagram {
+  color: #3f729b;
+}
+
+.fab.fa-twitter {
+  color: #55acee;
+}
+
 .info-icon {
   cursor: pointer;
   position: absolute;
@@ -244,10 +329,10 @@ button {
     visibility: visible;
   }
 }
-@media screen and (orientation: landscape) {
-  .info-icons .nk {
-    bottom: unset;
-    top: 1rem;
+@media screen and (orientation: portrait) {
+  .info-icons.show .nk {
+    opacity: 1;
+    visibility: visible;
   }
 }
 .modal-content {
@@ -263,63 +348,4 @@ button {
   max-height: 70%;
   max-width: 50rem;
   position: relative;
-}
-
-.icons a {
-  margin-right: 1rem;
-}
-
-.icons a.float-right {
-  margin-left: 1rem;
-  margin-right: 0;
-}
-
-span.icon {
-  font-size: 2rem;
-}
-
-.show-picture {
-  color: black;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-}
-
-.compress-expand {
-  bottom: 1rem;
-  color: black;
-  position: absolute;
-  right: 1rem;
-}
-
-.fab.fa-linkedin {
-  color: #0976b4;
-}
-
-.fab.fa-github {
-  color: #000000;
-}
-
-.fas.fa-code {
-  color: black;
-}
-
-.fas.fa-biking {
-  color: #329632;
-}
-
-.fas.fa-futbol {
-  color: #35033a;
-}
-
-.fab.fa-strava {
-  color: #fc5200;
-}
-
-.fab.fa-instagram {
-  color: #3f729b;
-}
-
-.fab.fa-twitter {
-  color: #55acee;
 }

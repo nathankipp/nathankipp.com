@@ -16,34 +16,31 @@
 
   &.contain {
     background-size: contain;
+    background-position: center;
   }
 }
 @media screen and (orientation: landscape) {
   #father,
-  #m-father .bg-section {
+  #m-father .bg-section:not(.contain) {
    background-position: left;
   }
 }
 
 button {
+  align-self: flex-end;
   background-color: white;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 2rem;
   font-weight: 600;
-  opacity: 0.85;
+  margin: 1rem;
+  opacity: 0.9;
   padding: 0.5rem 1rem;
   text-align: center;
 }
 
 #father {
   @include bgimg('fam', 'small');
-
-  button {
-    bottom: 1rem;
-    left: 1rem;
-    position: absolute;
-  }
 }
 #m-father .bg-section {
   @include bgimg('fam', 'small');
@@ -56,12 +53,6 @@ button {
 
 #cyclist {
   @include bgimg('cycling', 'small');
-
-  button {
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-  }
 }
 #m-cyclist .bg-section {
   @include bgimg('cycling', 'small');
@@ -81,14 +72,6 @@ button {
   #m-cyclist .bg-section {
     @include bgimg('cycling', 'medium');
   }
-  #father button,
-  #cyclist button {
-    bottom: unset;
-    left: unset;
-    position: relative;
-    right: unset;
-    top: unset;
-  }
 }
 
 /* Large and up */
@@ -105,11 +88,13 @@ button {
   #m-cyclist .bg-section {
     @include bgimg('cycling', 'large');
   }
+  button {
+    font-size: 2.5rem;
+  }
 }
 
 /* xl and up */
-@media screen and (min-width: 1200px) and (orientation: landscape),
-  screen and (min-width: 2500px) {
+@media screen and (min-width: 2500px) {
   #father,
   #m-father .bg-section {
     @include bgimg('fam', 'xlarge');
@@ -121,5 +106,8 @@ button {
   #cyclist,
   #m-cyclist .bg-section {
     @include bgimg('cycling', 'xlarge');
+  }
+  button {
+    font-size: 3rem;
   }
 }
