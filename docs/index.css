@@ -23,7 +23,6 @@
 }
 button {
   align-self: flex-end;
-  background-color: white;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 2rem;
@@ -33,11 +32,26 @@ button {
   padding: 0.5rem 1rem;
   text-align: center;
 }
-
-#father {
-  background-image: url("/assets/background-images/fam-small.jpg");
+button:hover {
+  opacity: 1;
 }
 
+#father button {
+  background-color: white;
+  color: #1c449a;
+}
+
+#software-engineer button {
+  background-color: black;
+  color: #f7c448;
+}
+
+#cyclist button {
+  background-color: #98ccfc;
+  color: #5b3c27;
+}
+
+#father,
 #m-father .bg-section {
   background-image: url("/assets/background-images/fam-small.jpg");
 }
@@ -47,10 +61,7 @@ button {
   background-image: url("/assets/background-images/td-small.jpg");
 }
 
-#cyclist {
-  background-image: url("/assets/background-images/cycling-small.jpg");
-}
-
+#cyclist,
 #m-cyclist .bg-section {
   background-image: url("/assets/background-images/cycling-small.jpg");
 }
@@ -126,12 +137,11 @@ body {
   justify-content: space-evenly;
 }
 
-@media screen and (orientation: landscape) {
-  .fa-chevron-circle-left {
+@media screen and (orientation: portrait) {
+  br {
     display: none;
   }
-}
-@media screen and (orientation: portrait) {
+
   .fa-chevron-circle-down {
     display: none;
   }
@@ -140,9 +150,8 @@ body {
   body {
     flex-direction: row;
   }
-}
-@media screen and (orientation: portrait) {
-  br {
+
+  .fa-chevron-circle-left {
     display: none;
   }
 }
