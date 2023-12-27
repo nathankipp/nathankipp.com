@@ -28,7 +28,6 @@
 
 button {
   align-self: flex-end;
-  background-color: white;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 2rem;
@@ -37,11 +36,26 @@ button {
   opacity: 0.9;
   padding: 0.5rem 1rem;
   text-align: center;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
-#father {
-  @include bgimg('fam', 'small');
+#father button {
+  background-color: white;
+  color: #1c449a;
 }
+#software-engineer button {
+  background-color: black;
+  color: #f7c448;
+}
+#cyclist button {
+  background-color: #98ccfc;
+  color: #5b3c27;
+}
+
+#father,
 #m-father .bg-section {
   @include bgimg('fam', 'small');
 }
@@ -51,9 +65,7 @@ button {
   @include bgimg('td', 'small');
 }
 
-#cyclist {
-  @include bgimg('cycling', 'small');
-}
+#cyclist,
 #m-cyclist .bg-section {
   @include bgimg('cycling', 'small');
 }

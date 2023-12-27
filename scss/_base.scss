@@ -10,12 +10,10 @@ body {
   justify-content: space-evenly;
 }
 
-@media screen and (orientation: landscape) {
-  .fa-chevron-circle-left {
+@media screen and (orientation: portrait) {
+  br {
     display: none;
   }
-}
-@media screen and (orientation: portrait) {
   .fa-chevron-circle-down {
     display: none;
   }
@@ -24,9 +22,7 @@ body {
   body {
     flex-direction: row;
   }
-}
-@media screen and (orientation: portrait) {
-  br {
+  .fa-chevron-circle-left {
     display: none;
   }
 }
